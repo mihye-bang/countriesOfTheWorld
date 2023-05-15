@@ -1,0 +1,17 @@
+/* imported because default mat-card did not raise & pop up */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+body {
+  margin: 10;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-card {
+  /* background-color: #f00; */
+  /* set popup to 24(the highest) */
+  cursor: pointer;
+}
+
+.mat-card-content {
+  text-align: center;
+}

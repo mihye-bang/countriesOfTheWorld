@@ -1,0 +1,10 @@
+/**
+ * Description: The css file to style/ decorate the info dialog template file.
+ * Date: August 14, 2022
+ */
+
+button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

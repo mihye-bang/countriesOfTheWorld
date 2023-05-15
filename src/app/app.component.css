@@ -1,0 +1,37 @@
+/**
+ * Description: The css file to style/ decorate the template file.
+ * Date: August 14, 2022
+ */
+
+/* wrapper for cards */
+
+.gridblock {
+  display: grid;
+  /* auto-fit: fit the size automatically based on # elements, auto-fill: even with 1 element stays small */
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.toolbar-title {
+  margin: 0 auto;
+  font-size: 1.8rem;
+}
+
+.toolbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+mat-card:hover {
+  border: 2px solid rgb(126, 174, 221);
+  background-color: rgb(140, 220, 240);
+  color: white;
+  cursor: pointer;
+}
+
+mat-radio-button:hover {
+  border: 1px solid rgb(140, 220, 240);
+  background-color: rgb(193, 250, 255);
+  cursor: pointer;
+}

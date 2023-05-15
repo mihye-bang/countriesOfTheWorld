@@ -1,0 +1,43 @@
+<!--
+    Description: The web application template file that displays 239 countries with the national flags
+                 and names using Angular Material. The users can sort the country display based on the continent, see application information with the info button on the toolbar, and click each mat-card to see the detail of the country.
+    Date: August 14, 2022
+-->
+
+<div class="toolbar-container">
+  <mat-toolbar color="primary">
+    <span class="toolbar-title">World Nations</span>
+    <button mat-icon-button aria-label="Example icon button with a home icon" (click)="openInfo()">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+<br>
+
+<div class="radio-container">
+  Continent: &nbsp;
+  <mat-radio-group [(ngModel)]="orderBy" (change)="handleContinentBy()">
+    <mat-radio-button value="all">All</mat-radio-button>&nbsp;
+    <mat-radio-button value="africa">Africa</mat-radio-button>&nbsp;
+    <mat-radio-button value="asia">Asia</mat-radio-button>&nbsp;
+    <mat-radio-button value="europe">Europe</mat-radio-button>&nbsp;
+    <mat-radio-button value="northAmerica">North America</mat-radio-button>&nbsp;
+    <mat-radio-button value="southAmerica">South America</mat-radio-button>&nbsp;
+    <mat-radio-button value="antarctica">Antarctica</mat-radio-button>&nbsp;
+    <mat-radio-button value="oceania">Oceania</mat-radio-button>
+  </mat-radio-group>
+</div>
+<br>
+
+<!-- wrap the card with a grid <div> -->
+<div class="gridblock">
+  <!-- material cards -->
+  <mat-card *ngFor="let nation of nations" (click)="openDialog(nation)">
+    <!-- 1. flag image -->
+    <img mat-card-image [src]="getFlagName(nation.Code2)">
+
+    <!-- 2. country name -->
+    <mat-card-content>{{nation.Name}}</mat-card-content>
+  </mat-card>
+</div>
+<!-- end of cards -->
