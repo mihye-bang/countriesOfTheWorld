@@ -1,6 +1,8 @@
 # Countries of the World
 Click [HERE](https://countries-of-the-world-lyart.vercel.app/) to try the app! 
 
+A Single-Page Application(SPA) utilizing Angular and TypeScript to showcase a comprehensive list of the countries in the world  
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
 
 ## Development server
